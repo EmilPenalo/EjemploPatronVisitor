@@ -1,13 +1,13 @@
-public class Circle implements Shape {
-    private double radius;
+public class Circulo implements Figura {
+    private double radio;
     private double area;
 
-    public Circle(double radius) {
-        this.radius = radius;
+    public Circulo(double radio) {
+        this.radio = radio;
     }
 
-    public double getRadius() {
-        return radius;
+    public double getRadio() {
+        return radio;
     }
 
     public double getArea() {
@@ -18,7 +18,7 @@ public class Circle implements Shape {
         this.area = area;
     }
 
-    public void accept(ShapeVisitor visitor) {
-        visitor.visitCircle(this);
+    public void accept(FiguraVisitor visitor) {
+        visitor.visitCirculo(this);
     }
 }

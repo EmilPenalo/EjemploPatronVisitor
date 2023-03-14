@@ -1,19 +1,19 @@
-public class Triangle implements Shape {
+public class Triangulo implements Figura {
     private double base;
-    private double height;
+    private double altura;
     private double area;
 
-    public Triangle(double base, double height) {
+    public Triangulo(double base, double altura) {
         this.base = base;
-        this.height = height;
+        this.altura = altura;
     }
 
     public double getBase() {
         return base;
     }
 
-    public double getHeight() {
-        return height;
+    public double getAltura() {
+        return altura;
     }
 
     public double getArea() {
@@ -24,7 +24,7 @@ public class Triangle implements Shape {
         this.area = area;
     }
 
-    public void accept(ShapeVisitor visitor) {
-        visitor.visitTriangle(this);
+    public void accept(FiguraVisitor visitor) {
+        visitor.visitTriangulo(this);
     }
 }

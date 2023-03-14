@@ -1,4 +1,4 @@
-public interface Shape {
-    void accept(ShapeVisitor visitor);
+public interface Figura {
+    void accept(FiguraVisitor visitor);
 }
 

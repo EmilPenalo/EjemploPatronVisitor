@@ -1,19 +1,19 @@
-public class Rectangle implements Shape {
-    private double width;
-    private double height;
+public class Rectangulo implements Figura {
+    private double largo;
+    private double altura;
     private double area;
 
-    public Rectangle(double width, double height) {
-        this.width = width;
-        this.height = height;
+    public Rectangulo(double largo, double altura) {
+        this.largo = largo;
+        this.altura = altura;
     }
 
-    public double getWidth() {
-        return width;
+    public double getLargo() {
+        return largo;
     }
 
-    public double getHeight() {
-        return height;
+    public double getAltura() {
+        return altura;
     }
 
     public double getArea() {
@@ -24,7 +24,7 @@ public class Rectangle implements Shape {
         this.area = area;
     }
 
-    public void accept(ShapeVisitor visitor) {
-        visitor.visitRectangle(this);
+    public void accept(FiguraVisitor visitor) {
+        visitor.visitRectangulo(this);
     }
 }

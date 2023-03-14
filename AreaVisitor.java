@@ -1,27 +1,16 @@
-public class AreaVisitor implements ShapeVisitor {
-    public void visitCircle(Circle circle) {
-        // calculate area of circle and store it in circle.area
+public class AreaVisitor implements FiguraVisitor {
+    public void visitCirculo(Circulo circulo) {
+        double area = Math.PI * circulo.getRadio() * circulo.getRadio();
+        circulo.setArea(area);
     }
 
-    public void visitRectangle(Rectangle rectangle) {
-        // calculate area of rectangle and store it in rectangle.area
+    public void visitRectangulo(Rectangulo rectangulo) {
+        double area = rectangulo.getLargo() * rectangulo.getAltura();
+        rectangulo.setArea(area);
     }
 
-    public void visitTriangle(Triangle triangle) {
-        // calculate area of triangle and store it in triangle.area
-    }
-}
-
-public class DrawingVisitor implements ShapeVisitor {
-    public void visitCircle(Circle circle) {
-        // draw circle on canvas
-    }
-
-    public void visitRectangle(Rectangle rectangle) {
-        // draw rectangle on canvas
-    }
-
-    public void visitTriangle(Triangle triangle) {
-        // draw triangle on canvas
+    public void visitTriangulo(Triangulo triangulo) {
+        double area = 0.5 * triangulo.getBase() * triangulo.getAltura();
+        triangulo.setArea(area);
     }
 }

@@ -1,5 +1,5 @@
-public interface ShapeVisitor {
-    void visitCircle(Circle circle);
-    void visitRectangle(Rectangle rectangle);
-    void visitTriangle(Triangle triangle);
+public interface FiguraVisitor {
+    void visitCirculo(Circulo circulo);
+    void visitRectangulo(Rectangulo rectangulo);
+    void visitTriangulo(Triangulo triangulo);
 }
